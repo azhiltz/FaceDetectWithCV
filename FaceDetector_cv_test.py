@@ -28,7 +28,8 @@ class TestFaceDetector( unittest.TestCase ):
 	def setUp( self ):
 		self.prototxt = 'model/deploy.prototxt'
 		self.weights = 'model/model_weights.caffemodel'
-		self.detector = CVFaceDetector( proto_path=self.prototxt, weights_path=self.weights, det_conf_thresh=0.6 )
+		self.detector = CVFaceDetector( proto_path=self.prototxt, weights_path=self.weights, det_conf_thresh=0.6,
+										 is_rgb=False )
 
 	def tearDown(self):
 		pass
